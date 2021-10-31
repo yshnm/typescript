@@ -12,8 +12,12 @@ document.querySelector<HTMLElement>("#parent")?.addEventListener(
   (event) => {
     let a = event.target.options;
 
+    document.querySelector<HTMLElement>("#child")?.innerHTML = "";
+
     for (var i = 0, l = a.length; l > i; i++) {
-      if (a[i].selected) {
+      if (a[i].selected && i === 0) {
+        return;
+      } else if (a[i].selected) {
         let j = JSON.parse(a[i].dataset.child);
 
         document.querySelector<HTMLElement>("#child")?.innerHTML = "";
