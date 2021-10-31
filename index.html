@@ -7,8 +7,14 @@
   <body>
     <div id="app"></div>
     <select id="parent">
-      <option value="0" data-child='[["0","子0"],["1","子1"]]'>親0</option>
-      <option value="1" data-child='[["2","子2"],["3","子3"]]'>親1</option>
+      <option value="0" data-child='[{"text":"key3","value":"val3"}]'
+        >親0</option
+      >
+      <option
+        value="1"
+        data-child='[{"text":"key0","value":"val0"},{"text":"key1","value":"val1"},{"text":"key2","value":"val2"}]'
+        >親1</option
+      >
     </select>
     <select id="child"></select>
 

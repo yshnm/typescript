@@ -20,11 +20,9 @@ document.querySelector<HTMLElement>("#parent")?.addEventListener(
       } else if (a[i].selected) {
         let j = JSON.parse(a[i].dataset.child);
 
-        document.querySelector<HTMLElement>("#child")?.innerHTML = "";
-
         j?.forEach((e) => {
           document.querySelector<HTMLElement>("#child")?.innerHTML += `
-          <option value=${e[0]}>${e[1]}</option>
+          <option value=${e["value"]}>${e["text"]}</option>
           `;
         });
       }
